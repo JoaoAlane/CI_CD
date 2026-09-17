@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculadora Com PHP</h1>
+    <hr>
+    <!--
+    Instruções
+
+Crie uma aplicação PHP que receba, por meio de um formulário HTML, dois valores numéricos. 
+Com base nesses valores, o sistema deve calcular e exibir o resultado das seguintes operações:
+
+Soma (+)
+Subtração (-)
+Multiplicação (*)
+Divisão (/)
+Resto da divisão / módulo (%)
+Potência (**)
+Concatenação dos dois valores como texto (.)
+O sistema deve tratar o caso em que o segundo valor seja zero, evitando erro na divisão e no módulo.
+
+Requisitos técnicos: uso de variáveis, recebimento de dados via $_POST, conversão de tipo (casting) dos valores recebidos, 
+e conhecimento de todos os operadores aritméticos do PHP.
+
+Entrega
+    -->
+
+    <form action="calcular.php" method="post">
+        <p>
+        <label for="n">Digite o primeiro número</label>
+        <input type="number" name="num1" required>
+        </p>
+        <p>
+
+        <label for="a">Digite o segundo número</label>
+        <input type="number" name="num2" required>
+        </p>
+        <input type="submit" value="calcular">
+        <input type="reset" value="limpar">
+    </form>
+</body>
+</html>

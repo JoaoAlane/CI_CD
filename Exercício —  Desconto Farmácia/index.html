@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmácia</title>
+    <link rel="stylesheet" href="style-farmacia.css">
+</head>
+<body>
+    <h1>Farmácia Paracetaloka </h1>
+    <hr>
+
+    <!--
+        A farmácia Paracetaloka, deseja calcular o total pedido de
+    seus clientes com base na faixa etária e cartão fidelidade.
+        Crie um sistema que obtenha o nome do cliente, total do
+     pedido, escolha a faixa etária e se o pagamento é por cartão
+     fidelidade.
+     Assuma que:
+            Iadade < 50: Sem desconto;
+            Idade entre 51 a 70: 5% de desconto;
+            idade >= 70: 7% de desconto
+
+            Se o cartão fidelidade for selecionado, o cliente
+            terá mais 5% de desconto.
+    -->
+
+    <form action="calcular.php" method="post">
+        <p>
+        <label for="n">Nome</label>
+        <input type="text" name="nome" required>
+        </p>
+
+        <p>
+        <label for="t">Total do pedido</label>
+        <input type="number" name="total">
+        </p>
+
+        <label for="idade">Faixa etária</label><br>
+        <input type="radio" name="idade" value="0">Menos de 50 anos<br>
+        <input type="radio" name="idade" value="1">Entre 51 a 70 anos<br>
+        <input type="radio" name="idade" value="2">Mais de 70 anos<br><br>
+
+        <label for="cartao">Cartão fidelidade</label>
+        <input type="checkbox" id="cartao" name="cartao">
+        <label for="cartao">Sim</label><br><br>
+
+        <input type="submit" value="calcular">
+        <input type="reset" value="limpar">
+    </form>
+</body>
+</html>

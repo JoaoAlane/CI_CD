@@ -1,5 +1,4 @@
 <?php
-// Dados recebidos do formulário
 $nome = $_POST['nome'];
 $total = (float) $_POST['total'];
 $idade = (int) $_POST['idade'];
@@ -57,5 +56,29 @@ $valorFinal = $total - $valorDescontoIdade - $valorDescontoCartao;
     <h2><?php echo "Desconto do cartão: $descontoCartao%"?></h2>
     <h2><?php echo "Valor de pedido: R$$total,00"?></h2>
     <h2><?php echo "Valor com desconto aplicado: R$$valorFinal,00"?></h2>
+
+    <div class="parcelas">
+        <h3>Parcelamento (usando for)</h3>
+        <?php
+        for ($i = 1; $i <= 6; $i++)
+            {
+                $parcela = $valorFinal / $i;
+                echo "<p>{$i}x de R$ " . number_format($parcela, 2, ',', '.') . "</p>";
+            }
+        ?>
+    </div>
+
+    <div class="parcelas">
+        <h3>Parcelamento (usando while)</h3>
+        <?php
+        $j = 1;
+        while ($j <= 6)
+            {
+                $parcela = $valorFinal / $j;
+                echo "<p>{$j}x de R$ " . number_format($parcela, 2, ',', '.') . "</p>";
+                $j++;
+            }
+        ?>
+    </div>
 </body>
 </html>

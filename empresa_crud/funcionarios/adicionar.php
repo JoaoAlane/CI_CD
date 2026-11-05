@@ -21,8 +21,8 @@
         <label for="salario">Salário:</label>
         <input type="number" id="salario" name="salario" step="0.01" required><br><br>
 
-        <label for="data_adimissao">Data de Admissão:</label>
-        <input type="date" id="data_adimissao" name="data_adimissao" required><br><br>
+        <label for="data_admissao">Data de Admissão:</label>
+        <input type="date" id="data_admissao" name="data_admissao" required><br><br>
 
         <input type="submit" value="Adicionar Funcionário">
         <input type="reset" value="Limpar Campos">

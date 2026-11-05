@@ -1,14 +1,18 @@
 <?php
+
+
 $servidor = "localhost";
 $usuario = "root";
 $senha = "";
-$banco = "empresa";
 
-$result = mysqli_connect($servidor, $usuario, $senha, $banco);
+$db = "empresa";
 
-if (!$result) {
-    die("Erro ao conectar ao banco de dados: " . mysqli_connect_error());
-} else {
-    echo "Conexão ao banco de dados realizada com sucesso!";
+$conexao = mysqli_connect($servidor, $usuario, $senha, $db);
+
+if ($conexao) {
+    echo "BANCO CONECTADO COM SUCESSO.";
+}else {
+    echo "FALHA AO CONECTAR COM O BANCO DE DADOS: " . mysqli_connect_error($conexao);
 }
+
 ?>
